@@ -1,0 +1,21 @@
+- name: take variables from inventory
+  hosts: web
+  vars: #
+    COURCE: "Devops with AWS PLAY LEVEL"
+    DURATION: "120 HOURS"
+    TRAINER: "SIVA KUMAR REDDY"
+  vars_prompt:
+  - name: COURCE
+    prompt: "Please Enter Cource Name PROMPT LEVEL"
+  - name: DURATION
+    prompt: "Please Enter DURATION"
+  - name: TRAINER
+    prompt: "Please Enter TRAINER"  
+  tasks:
+   - name: print the information
+     vars: #
+       COURCE: "Devops with AWS TAKS LEVEL"
+       DURATION: "120 HOURS"
+       TRAINER: "SIVA KUMAR REDDY"
+     ansible.builtin.debug:
+      msg: "Hello this is syam kumar {{COURCE}}"
