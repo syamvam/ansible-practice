@@ -1,0 +1,20 @@
+- name devops Cource information
+  hosts: local
+  vars:
+    cource: "DevOps with AWS"
+    duration: 120
+    topics:
+    - Linux
+    - Shell
+    - ansible
+    - Terraform
+    - AWS
+    live: true
+      ci: jenkins
+      cm: ansible
+      cloud: AWS
+  tasks:
+  - name: print the cource information
+    ansible.builtin.deubg:
+      msg:"Hi , I Am Learning {{cource}}, with duration {{duration}},topics are: {{topics}}, and live: {{live}}, tools are {{tools}}"    
+  
