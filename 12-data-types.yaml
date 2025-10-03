@@ -1,15 +1,16 @@
-- name: ansible with data types
+- name: devops course information
   hosts: local
-  connection: local
+  connection: local # for localhosts
   vars:
-    cource: "DevOps with AWS"
-    duration: 120
-    topics:
+    course: "DevOps with AWS" #string
+    duration: 120 #number
+    topics: #list
     - Linux
     - Shell
-    - ansible
+    - Ansible
     - Terraform
     - AWS
+    - K8
     live: true #boolean
     tools: #map/dictionary
       ci: jenkins # string
@@ -19,6 +20,6 @@
       - IAM
       - S3
   tasks:
-   - name: print the cource information
-     ansible.builtin.deubg:
-        msg: "Hi, I am learning {{ course }}, with duration: {{ duration }}, topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}" 
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{ course }}, with duration: {{ duration }}, topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}"
