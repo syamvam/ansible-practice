@@ -21,4 +21,4 @@
   tasks:
   - name: print the cource information
     ansible.builtin.deubg:
-      msg:"Hi , I Am Learning {{cource}}, with duration {{duration}},topics are: {{topics}}, and live: {{live}}, tools are {{tools}}" 
+       msg: "Hi, I am learning {{ course }}, with duration: {{ duration }}, topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}" 
