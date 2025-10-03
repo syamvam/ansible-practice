@@ -5,4 +5,4 @@
   tasks:
   - name: print the cource information
     ansible.builtin.debug:
-    msg: "Hello this is syam kumar {{COURCE}},{{DURATION}},{{TRAINER}}"
+      msg: "Hello this is syam kumar {{COURCE}},{{DURATION}},{{TRAINER}}"
