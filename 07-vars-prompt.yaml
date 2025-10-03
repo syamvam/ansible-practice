@@ -1,0 +1,13 @@
+- name : variables with files
+  hosts: web
+  vars_prompt:
+  - name: COURCE
+    prompt: "Please Enter Cource Name"
+  - name: DURATION
+    prompt: "Please Enter DURATION"
+  - name: TRAINER
+    prompt: "Please Enter TRAINER"    
+  tasks:
+  - name: print the cource information
+    ansible.builtin.debug:
+      msg: "Hello this is syam kumar {{COURCE}},{{DURATION}},{{TRAINER}}"
