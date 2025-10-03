@@ -9,12 +9,15 @@
     - ansible
     - Terraform
     - AWS
-    live: true
-      ci: jenkins
+    live: true #boolean
+    tools: #map/dictionary
+      ci: jenkins # string
       cm: ansible
-      cloud: AWS
+      cloud: aws
+      aws:
+      - IAM
+      - S3
   tasks:
   - name: print the cource information
     ansible.builtin.deubg:
       msg:"Hi , I Am Learning {{cource}}, with duration {{duration}},topics are: {{topics}}, and live: {{live}}, tools are {{tools}}" 
-      
