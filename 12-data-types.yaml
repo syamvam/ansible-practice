@@ -19,6 +19,6 @@
       - IAM
       - S3
   tasks:
-  - name: print the cource information
-    ansible.builtin.deubg:
-       msg: "Hi, I am learning {{ course }}, with duration: {{ duration }}, topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}" 
+   - name: print the cource information
+     ansible.builtin.deubg:
+        msg: "Hi, I am learning {{ course }}, with duration: {{ duration }}, topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}" 
