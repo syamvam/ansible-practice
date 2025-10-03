@@ -1,5 +1,6 @@
 - name: ansible with data types
   hosts: local
+  connection: local
   vars:
     cource: "DevOps with AWS"
     duration: 120
